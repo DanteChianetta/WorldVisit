@@ -1,0 +1,38 @@
+<ion-content class="explore-page">
+  <section class="explore-container">
+    
+    <header class="explore-header">
+      <h1>Explorar Países</h1>
+      <p>Descubre tu próximo destino.</p>
+    </header>
+    
+      <ion-searchbar
+       class="search"
+       placeholder="Buscar por nombre..."> 
+      </ion-searchbar>
+      
+      <div class="chips">
+        <button class="chip chip-active" type="button">Todos</button> 
+        <button class="chip" type="button">Europa</button>
+        <button class="chip" type="button">Asia</button>
+        <button class="chip" type="button">America</button>
+        <button class="chip" type="button">Africa</button>        
+      </div>   
+
+      <div class="list">  
+        <article class="country-card" *ngFor="let country of countries">
+        
+          <img class="country-flag" [src]="country.flag" [alt]="country.name + 'flag'" />
+
+          <div class="country-info">
+            <h3>{{ country.name }}</h3>
+            <p>{{ country.capital }}</p>
+          </div>
+
+          <ion-button fill="clear" type="button" class="favorite-button" [class.active]="country.favorite">
+          <ion-icon [name]="country.favorite ? 'heart' : 'heart-outline'">            </ion-icon>
+          </ion-button>      
+        </article>
+      </div>
+  </section>
+</ion-content> 

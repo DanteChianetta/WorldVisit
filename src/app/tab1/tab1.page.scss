@@ -1,0 +1,148 @@
+.explore-page{
+    --background: var(--app-background);
+    font-family: var(--app-font-family);
+}
+
+.explore-page::part(scroll){
+    padding: 0.5rem 0rem;
+}
+
+.explore-container{
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 0rem 1rem 0rem;
+}
+
+.explore-header {
+    font-size: 2.9rem;
+    font-family: var(--app-font-family);
+}
+
+.explore-header h1  {
+    color: var(--app-text);
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.explore-header p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: var(--app-text-muted);
+    
+}
+
+.search {
+    --background : var(--app-surface-soft);
+    --background-radius: 1rem;
+    --box-shadow: none;
+    --color: var(--app-text);
+    --placeholder-color: var(--app-text-muted);
+    --icon-color: var(--app-text-muted);
+    --border-radius: 1rem;
+    
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.chips {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.25rem;
+}
+
+.chip {
+    flex-shrink: 0;
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    
+    border-radius: 999px;
+    border: 1px solid var(--app-outline-soft); 
+
+    background: var(--app-surface-low);
+    color: var(--app-text-muted);
+
+    font-family: var(--app-font-family);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.chip-active{
+    background: var(--app-chip-active-bg);
+    color: var(--app-chip-active-text);
+    border-color: transparent;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.country-card {
+    display: flex;
+    align-items: center;
+    min-height: 5.25rem;
+    padding: 1rem;
+    box-shadow: 0 0.25rem 0.75rem;
+    background: var(--app-surface);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.75rem var(--app-shadow-soft);
+}
+
+.country-flag{
+    width: 4.25rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid var(--app-flag-outline);
+    flex-shrink: 0;
+}
+
+.country-info{
+    flex:1;
+    margin-left: 1rem;
+}
+
+.country-info h3{
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: var(--app-text);
+}
+
+.country-info p {
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--app-text-muted);
+
+}
+.favorite-button {
+  width: 2.75rem;
+  height: 2.75rem;
+
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: transparent;
+  --box-shadow: none;
+  --color: var(--app-text-muted);
+}
+
+.favorite-button ion-icon {
+  font-size: 1.75rem;
+}
+
+.favorite-button.active {
+  --background: var(--app-favorite-bg);
+  --border-radius: 999px;
+  --color: var(--app-favorite);
+}
